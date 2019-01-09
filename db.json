@@ -1,0 +1,116 @@
+{
+  "breakfast": [
+    {
+      "id": 1,
+      "name": "Eggs",
+      "image": "/eggs.jpg",
+      "rating": {
+        "id": 1,
+        "value": 0
+      }
+    },
+    {
+      "id": 2,
+      "name": "Toast",
+      "image": "/toast.jpg",
+      "rating": {
+        "id": 2,
+        "value": 0
+      }
+    },
+    {
+      "id": 3,
+      "name": "Bacon",
+      "image": "/bacon.jpg",
+      "rating": {
+        "id": 3,
+        "value": 0
+      }
+    },
+    {
+      "id": 9,
+      "name": "Coffee",
+      "image": "/coffee.jpg",
+      "rating": {
+        "id": 9,
+        "value": 0
+      }
+    }
+  ],
+  "lunch": [
+    {
+      "id": 4,
+      "name": "Rice",
+      "image": "/rice.jpg",
+      "rating": {
+        "id": 4,
+        "value": 0
+      }
+    },
+    {
+      "id": 5,
+      "name": "Meat",
+      "image": "/meat.jpg",
+      "rating": {
+        "id": 5,
+        "value": 0
+      }
+    },
+    {
+      "id": 3,
+      "name": "Bacon",
+      "image": "/bacon.jpg",
+      "rating": {
+        "id": 3,
+        "value": 0
+      }
+    },
+    {
+      "id": 7,
+      "name": "Hamburguer",
+      "image": "/hamburguer.jpg",
+      "rating": {
+        "id": 7,
+        "value": 0
+      }
+    }
+  ],
+  "dinner": [
+    {
+      "id": 6,
+      "name": "Pizza",
+      "image": "/pizza.jpg",
+      "rating": {
+        "id": 6,
+        "value": 0
+      }
+    },
+    {
+      "id": 7,
+      "name": "Hamburguer",
+      "image": "/hamburguer.jpg",
+      "rating": {
+        "id": 7,
+        "value": 0
+      }
+    },
+    {
+      "id": 1,
+      "name": "Eggs",
+      "image": "/eggs.jpg",
+      "rating": {
+        "id": 1,
+        "value": 0
+      }
+    },
+    {
+      "id": 8,
+      "name": "Sushi",
+      "image": "/sushi.jpg",
+      "rating": {
+        "id": 8,
+        "value": 0
+      }
+    }
+  ]
+}

@@ -30,3 +30,41 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #f5f5f5;
+}
+
+.meals-container {
+  max-width: 880px;
+  margin: 20px auto;
+}
+
+.meal-showcase {
+  display: flex;
+  justify-content: center;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.meal-rater {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card {
+  max-width: 200px;
+  margin: 0 10px;
+}
+
+.fa-star {
+  color: darkgoldenrod;
+  cursor: pointer;
+}
