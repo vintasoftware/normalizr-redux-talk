@@ -2,6 +2,8 @@
 
 This repo contains the example code shown at the Normalizing Redux talk, as well as some supporting links about the content of the talk
 
+Link to the slides : https://www.slideshare.net/JooPauloSiqueiraLins/normalizing-redux
+
 ## How to run
 
 - Clone repo with `git clone https://github.com/vintasoftware/normalizr-redux-talk`
