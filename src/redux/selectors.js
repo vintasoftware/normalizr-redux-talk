@@ -1,4 +1,3 @@
-
 // General Selectors
 export const selectBreakfastMeals = state => state.ui.breakfast;
 

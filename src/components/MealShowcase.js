@@ -1,7 +1,7 @@
 import React from 'react';
 import MealCard from "./MealCard";
 
-const MealShowcase = ({meals, title}) => (
+const MealShowcase = ({ meals, title }) => (
   <>
     <h2>{title}</h2>
     <div className="meal-showcase">

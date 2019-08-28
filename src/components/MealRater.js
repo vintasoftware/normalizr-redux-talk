@@ -1,21 +1,21 @@
-import React, {Component} from 'react';
-import {connect} from "react-redux";
-import {getRatingById} from "../redux/selectors";
-import {setRating} from "../redux/actions";
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { getRatingById } from "../redux/selectors";
+import { setRating } from "../redux/actions";
 
-const Star = ({icon, click}) => (
+const Star = ({ icon, click }) => (
   <i onClick={click} className={`${icon} fa-star`}/>
 );
 
 class MealRater extends Component {
 
   handleStarClick = (newRate) => {
-    const {setRating, id} = this.props;
+    const { setRating, id } = this.props;
     setRating(id, newRate);
   };
 
   render() {
-    const {id, rating} = this.props;
+    const { id, rating } = this.props;
     const value = rating.value;
     const stars = [...Array(5).keys()].map(s => s + 1);
 
@@ -30,10 +30,10 @@ class MealRater extends Component {
   }
 }
 
-const mapStateToProps = (state, {id}) => ({
+const mapStateToProps = (state, { id }) => ({
   rating: getRatingById(state, id)
 });
 
-const actionCreators = {setRating};
+const actionCreators = { setRating };
 
 export default connect(mapStateToProps, actionCreators)(MealRater);

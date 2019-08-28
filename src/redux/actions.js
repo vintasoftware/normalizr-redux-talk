@@ -1,6 +1,6 @@
-import {fetchBreakfast, fetchDinner, fetchLunch} from "./services";
-import {normalize} from "normalizr";
-import {mealSchema} from "./schemas";
+import { fetchBreakfast, fetchDinner, fetchLunch } from "./services";
+import { normalize } from "normalizr";
+import { mealSchema } from "./schemas";
 
 export const FETCH_MEALS = 'FETCH_MEALS';
 export const SET_RATING = 'SET_RATING';

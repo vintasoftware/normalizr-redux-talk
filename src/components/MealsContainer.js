@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
-import {connect} from "react-redux";
-import {fetchMeals} from "../redux/actions";
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { fetchMeals } from "../redux/actions";
 import MealShowcase from "./MealShowcase";
-import {selectBreakfastMeals, selectDinnerMeals, selectLunchMeals} from "../redux/selectors";
+import { selectBreakfastMeals, selectDinnerMeals, selectLunchMeals } from "../redux/selectors";
 
 class MealsContainer extends Component {
   componentDidMount() {
-    const {fetchMeals} = this.props;
+    const { fetchMeals } = this.props;
 
     fetchMeals();
   }
 
   render() {
-    const {breakfastMeals, lunchMeals, dinnerMeals} = this.props;
+    const { breakfastMeals, lunchMeals, dinnerMeals } = this.props;
 
     return (
       <div className="meals-container">
@@ -25,11 +25,11 @@ class MealsContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    breakfastMeals: selectBreakfastMeals(state),
-    lunchMeals: selectLunchMeals(state),
-    dinnerMeals: selectDinnerMeals(state),
+  breakfastMeals: selectBreakfastMeals(state),
+  lunchMeals: selectLunchMeals(state),
+  dinnerMeals: selectDinnerMeals(state),
 });
 
-const actionCreators = {fetchMeals};
+const actionCreators = { fetchMeals };
 
 export default connect(mapStateToProps, actionCreators)(MealsContainer);
