@@ -11,11 +11,13 @@
       "categories": [
         {
           "id": 1,
-          "name": "Breakfast"
+          "name": "Breakfast",
+          "order": 1
         },
         {
           "id": 3,
-          "name": "Dinner"
+          "name": "Dinner",
+          "order": 3
         }
       ]
     },
@@ -30,7 +32,8 @@
       "categories": [
         {
           "id": 1,
-          "name": "Breakfast"
+          "name": "Breakfast",
+          "order": 1
         }
       ]
     },
@@ -45,11 +48,13 @@
       "categories": [
         {
           "id": 1,
-          "name": "Breakfast"
+          "name": "Breakfast",
+          "order": 1
         },
         {
           "id": 2,
-          "name": "Lunch"
+          "name": "Lunch",
+          "order": 2
         }
       ]
     },
@@ -64,7 +69,8 @@
       "categories": [
         {
           "id": 1,
-          "name": "Breakfast"
+          "name": "Breakfast",
+          "order": 1
         }
       ]
     },
@@ -79,7 +85,8 @@
       "categories": [
         {
           "id": 2,
-          "name": "Lunch"
+          "name": "Lunch",
+          "order": 2
         }
       ]
     },
@@ -94,7 +101,8 @@
       "categories": [
         {
           "id": 2,
-          "name": "Lunch"
+          "name": "Lunch",
+          "order": 2
         }
       ]
     },
@@ -109,11 +117,13 @@
       "categories": [
         {
           "id": 2,
-          "name": "Lunch"
+          "name": "Lunch",
+          "order": 2
         },
         {
           "id": 3,
-          "name": "Dinner"
+          "name": "Dinner",
+          "order": 3
         }
       ]
     },
@@ -128,7 +138,8 @@
       "categories": [
         {
           "id": 3,
-          "name": "Dinner"
+          "name": "Dinner",
+          "order": 3
         }
       ]
     },
@@ -143,7 +154,8 @@
       "categories": [
         {
           "id": 3,
-          "name": "Dinner"
+          "name": "Dinner",
+          "order": 3
         }
       ]
     }

@@ -1,35 +1,34 @@
-import {produce} from "immer";
+import { produce } from "immer";
 import _merge from "lodash/merge";
-import {FETCH_MEALS, SET_RATING} from "./actions";
+import { SAVE_MEALS, SET_RATING } from "./actions";
 
 const initialState = {
   ui: {
-    breakfast: [],
-    lunch: [],
-    dinner: []
+    categoryList: [],
   },
   entities: {
     meals: {},
-    ratings: {}
+    ratings: {},
+    categories: {},
   }
 };
 
 const reducer = (state = initialState, action) => {
   let newState = state;
-  const {type, payload} = action;
+  const { type, payload } = action;
 
   switch (type) {
-    case FETCH_MEALS:
-      const {entities, mealKey, mealValues} = payload;
+    case SAVE_MEALS:
+      const { entities, categoryList } = payload;
 
       newState = produce(state, (draft => {
         _merge(draft.entities, entities);
-        draft.ui[mealKey] = mealValues;
+        draft.ui.categoryList = categoryList;
       }));
 
       break;
     case SET_RATING:
-      const {id, rating} = payload;
+      const { id, rating } = payload;
 
       newState = produce(state, (draft => {
         draft.entities.ratings[id].value = rating;

@@ -1,16 +1,16 @@
-import {fetchBreakfast, fetchDinner, fetchLunch} from "./services";
-import {normalize} from "normalizr";
-import {mealSchema} from "./schemas";
+import { fetchMeals as fetchMealsService } from "./services";
+import _sortBy from "lodash/sortBy"
+import { normalize } from "normalizr";
+import { mealSchema } from "./schemas";
 
-export const FETCH_MEALS = 'FETCH_MEALS';
+export const SAVE_MEALS = 'SAVE_MEALS';
 export const SET_RATING = 'SET_RATING';
 
-const saveMeals = (entities, mealKey, mealValues) => ({
-  type: FETCH_MEALS,
+const saveMeals = (entities, categoryList) => ({
+  type: SAVE_MEALS,
   payload: {
     entities,
-    mealKey,
-    mealValues
+    categoryList
   }
 });
 
@@ -22,29 +22,17 @@ export const setRating = (id, rating) => ({
   }
 });
 
-const fetchMealCallback = (mealKey, dispatch) => (
-  (res) => {
-    const { data } = res;
-    const { entities, result } = normalize(data, [mealSchema]);
-
-    return dispatch(saveMeals(entities, mealKey, result));
-  }
-);
-
 export const fetchMeals = () => (
   (dispatch) => {
-    const breakfastPromise = fetchBreakfast().then(
-      fetchMealCallback('breakfast', dispatch)
-    );
+    return fetchMealsService().then((res) => {
+      const { data } = res;
+      const { entities } = normalize(data, [mealSchema]);
 
-    const lunchPromise = fetchLunch().then(
-      fetchMealCallback('lunch', dispatch)
-    );
+      const categoryValuesList = Object.values(entities.categories);
+      const sortedCategoryValuesList = _sortBy(categoryValuesList, 'order');
+      const categoryList = sortedCategoryValuesList.map(c => c.id);
 
-    const dinnerPromise = fetchDinner().then(
-      fetchMealCallback('dinner', dispatch)
-    );
-
-    return Promise.all([breakfastPromise, lunchPromise, dinnerPromise]);
+      return dispatch(saveMeals(entities, categoryList));
+    });
   }
 );

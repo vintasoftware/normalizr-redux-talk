@@ -1,10 +1,13 @@
 import {schema} from "normalizr";
 
-export const ratingSchema = new schema.Entity('ratings');
+const ratingSchema = new schema.Entity('ratings');
+
+const categorySchema = new schema.Entity('categories');
 
 export const mealSchema = new schema.Entity(
   'meals',
   {
-    rating: ratingSchema
+    rating: ratingSchema,
+    categories: [categorySchema]
   }
 );
