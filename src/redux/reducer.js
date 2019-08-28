@@ -1,7 +1,8 @@
-import {List, fromJS} from "immutable";
+import {produce} from "immer";
+import _merge from "lodash/merge";
 import {FETCH_MEALS, SET_RATING} from "./actions";
 
-const initialState = fromJS({
+const initialState = {
   ui: {
     breakfast: [],
     lunch: [],
@@ -11,7 +12,7 @@ const initialState = fromJS({
     meals: {},
     ratings: {}
   }
-});
+};
 
 const reducer = (state = initialState, action) => {
   let newState = state;
@@ -19,19 +20,21 @@ const reducer = (state = initialState, action) => {
 
   switch (type) {
     case FETCH_MEALS:
-      const entitiesMap = fromJS(payload.entities);
+      const {entities, mealKey, mealValues} = payload;
 
-      newState = state
-        .setIn(['ui', payload.mealKey], List(payload.mealValues)) // Set UI id list
-        .mergeDeepIn(['entities'], entitiesMap); // Set all entities
+      newState = produce(state, (draft => {
+        _merge(draft.entities, entities);
+        draft.ui[mealKey] = mealValues;
+      }));
 
       break;
     case SET_RATING:
-      newState = state
-        .setIn(
-          ['entities', 'ratings', payload.id.toString(), 'value'],
-          payload.rating
-        );
+      const {id, rating} = payload;
+
+      newState = produce(state, (draft => {
+        draft.entities.ratings[id].value = rating;
+      }));
+
       break;
     default:
   }

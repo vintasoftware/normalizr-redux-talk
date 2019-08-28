@@ -10,12 +10,12 @@ class MealCard extends Component {
 
     return (
       <div className="card">
-        <img src={meal.get('image')} className="card-img-top" alt={meal.get('name')}/>
+        <img src={meal.image} className="card-img-top" alt={meal.image}/>
         <div className="card-body">
-          <div className="card-title">{meal.get('name')}</div>
+          <div className="card-title">{meal.name}</div>
           <MealRater
-            id={meal.get('rating')}
-            key={meal.get('rating')}/>
+            id={meal.rating}
+            key={meal.rating}/>
         </div>
       </div>
     );

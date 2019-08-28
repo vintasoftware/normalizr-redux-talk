@@ -16,7 +16,7 @@ class MealRater extends Component {
 
   render() {
     const {id, rating} = this.props;
-    const value = rating.get('value');
+    const value = rating.value;
     const stars = [...Array(5).keys()].map(s => s + 1);
 
     return (
