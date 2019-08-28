@@ -1,4 +1,3 @@
-
 // General Selectors
 export const selectCategoryList = state => state.ui.categoryList;
 

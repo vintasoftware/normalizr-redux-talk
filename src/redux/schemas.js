@@ -1,4 +1,4 @@
-import {schema} from "normalizr";
+import { schema } from "normalizr";
 
 const ratingSchema = new schema.Entity('ratings');
 

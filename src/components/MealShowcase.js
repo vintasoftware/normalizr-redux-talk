@@ -3,7 +3,7 @@ import MealCard from "./MealCard";
 import { connect } from "react-redux";
 import { getCategoryById, getMealsByCategory } from "../redux/selectors";
 
-const MealShowcase = ({ category, meals }) => (
+const MealShowcase = ({ category, meals  }) => (
   <>
     <h2>{category.name}</h2>
     <div className="meal-showcase">
