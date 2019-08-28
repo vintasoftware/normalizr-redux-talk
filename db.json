@@ -1,5 +1,5 @@
 {
-  "breakfast": [
+  "meals": [
     {
       "id": 1,
       "name": "Eggs",
@@ -7,7 +7,17 @@
       "rating": {
         "id": 1,
         "value": 0
-      }
+      },
+      "categories": [
+        {
+          "id": 1,
+          "name": "Breakfast"
+        },
+        {
+          "id": 3,
+          "name": "Dinner"
+        }
+      ]
     },
     {
       "id": 2,
@@ -16,7 +26,13 @@
       "rating": {
         "id": 2,
         "value": 0
-      }
+      },
+      "categories": [
+        {
+          "id": 1,
+          "name": "Breakfast"
+        }
+      ]
     },
     {
       "id": 3,
@@ -25,7 +41,17 @@
       "rating": {
         "id": 3,
         "value": 0
-      }
+      },
+      "categories": [
+        {
+          "id": 1,
+          "name": "Breakfast"
+        },
+        {
+          "id": 2,
+          "name": "Lunch"
+        }
+      ]
     },
     {
       "id": 9,
@@ -34,10 +60,14 @@
       "rating": {
         "id": 9,
         "value": 0
-      }
-    }
-  ],
-  "lunch": [
+      },
+      "categories": [
+        {
+          "id": 1,
+          "name": "Breakfast"
+        }
+      ]
+    },
     {
       "id": 4,
       "name": "Rice",
@@ -45,7 +75,13 @@
       "rating": {
         "id": 4,
         "value": 0
-      }
+      },
+      "categories": [
+        {
+          "id": 2,
+          "name": "Lunch"
+        }
+      ]
     },
     {
       "id": 5,
@@ -54,16 +90,13 @@
       "rating": {
         "id": 5,
         "value": 0
-      }
-    },
-    {
-      "id": 3,
-      "name": "Bacon",
-      "image": "/bacon.jpg",
-      "rating": {
-        "id": 3,
-        "value": 0
-      }
+      },
+      "categories": [
+        {
+          "id": 2,
+          "name": "Lunch"
+        }
+      ]
     },
     {
       "id": 7,
@@ -72,10 +105,18 @@
       "rating": {
         "id": 7,
         "value": 0
-      }
-    }
-  ],
-  "dinner": [
+      },
+      "categories": [
+        {
+          "id": 2,
+          "name": "Lunch"
+        },
+        {
+          "id": 3,
+          "name": "Dinner"
+        }
+      ]
+    },
     {
       "id": 6,
       "name": "Pizza",
@@ -83,25 +124,13 @@
       "rating": {
         "id": 6,
         "value": 0
-      }
-    },
-    {
-      "id": 7,
-      "name": "Hamburguer",
-      "image": "/hamburguer.jpg",
-      "rating": {
-        "id": 7,
-        "value": 0
-      }
-    },
-    {
-      "id": 1,
-      "name": "Eggs",
-      "image": "/eggs.jpg",
-      "rating": {
-        "id": 1,
-        "value": 0
-      }
+      },
+      "categories": [
+        {
+          "id": 3,
+          "name": "Dinner"
+        }
+      ]
     },
     {
       "id": 8,
@@ -110,7 +139,13 @@
       "rating": {
         "id": 8,
         "value": 0
-      }
+      },
+      "categories": [
+        {
+          "id": 3,
+          "name": "Dinner"
+        }
+      ]
     }
   ]
 }
