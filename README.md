@@ -2,7 +2,9 @@
 
 This repo contains the example code shown at the Normalizing Redux talk, as well as some supporting links about the content of the talk
 
-Link to the slides : https://www.slideshare.net/JooPauloSiqueiraLins/normalizing-redux
+## Presentations
+- React Recife #1 (Aug/19): [English](https://speakerdeck.com/joaopslins/normalizing-redux) | [Português](https://speakerdeck.com/joaopslins/normalizing-redux-pt)
+- FrontJS Meetup Talk (Jan/19) : [English](https://www.slideshare.net/JooPauloSiqueiraLins/normalizing-redux)
 
 ## How to run
 
