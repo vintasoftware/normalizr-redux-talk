@@ -17,14 +17,14 @@ This repo contains the example code shown at the Normalizing Redux talk, as well
 
 ### Repositories
 - [Normalizr](https://github.com/paularmstrong/normalizr)
-- [ImmutableJS](https://github.com/facebook/immutable-js/)
+- [Immer](https://github.com/immerjs/immer)
 - [Reselect - Memoized Selectors](https://github.com/reduxjs/reselect)
 
 
 ### Talks / Videos
 - [[Dan Abramov] Redux: Normalizing API Responses with normalizr](https://egghead.io/lessons/javascript-redux-normalizing-api-responses-with-normalizr)
 - [[BrieBug] Modeling Redux State - Presented at AngularMix 2017](https://www.youtube.com/watch?v=pffEkpuZpPo)
--  [[Grace Hopper Academy] Immutable.js Tutorial - How to Create Immutable Data Structures with Immutable.js](https://www.youtube.com/watch?v=rIYbfW8n6Fw)
+-  [[Michel Weststrate] Immer, Immutability and the Wonderful World of Proxies](https://www.youtube.com/watch?v=4Nb9Gwp2L24)
 
 ### Docs 
 
